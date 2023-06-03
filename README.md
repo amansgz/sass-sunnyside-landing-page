@@ -24,7 +24,7 @@ Users should be able to:
 
 ## Live site solution
 
-[Live site]() hosted on Netlify.
+[Live site](https://sass-sunnyside-landing-page.netlify.app/) hosted on Netlify.
 
 ## Author
 
