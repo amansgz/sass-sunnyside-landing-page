@@ -1,0 +1,25 @@
+@use'../abstracts' as *;
+@use'../mixins' as *;
+
+.social-menu {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+
+    &__link {
+        color: $dark-moderate-cyan;
+
+        &:hover {
+            color: $white;
+            cursor: pointer;
+        }
+    }
+    &__icon {
+        width: max(1vw, 20px);
+        margin: 1rem;
+
+        &:hover {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(112deg) brightness(176%) contrast(101%);
+        }    
+    }
+}

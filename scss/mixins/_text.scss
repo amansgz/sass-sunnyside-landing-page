@@ -1,0 +1,15 @@
+@use'../abstracts' as *;
+
+
+@mixin title($color-title: $very-dark-desaturated-blue, $transform-title: none){
+    font-family: $serif-font;
+    font-weight: 900;
+    color: $color-title;
+    text-transform: $transform-title;
+}
+
+@mixin text($font, $weight, $font-color) {
+    font-family: $font;
+    font-weight: $weight;
+    color: $font-color;
+}

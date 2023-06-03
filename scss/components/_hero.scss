@@ -1,0 +1,27 @@
+@use'../abstracts' as *;
+@use'../mixins' as *;
+
+.hero {
+    @include flex-column(center);
+    @include bg-image(url(../images/mobile/image-header.jpg), center center);
+    
+    height: 80vh;
+    padding: 10vw;
+
+    @include mQ(600px) {
+        @include bg-image(url(../images/desktop/image-header.jpg), center center);
+    }
+
+    &__title {
+        @include title($white, uppercase);
+        font-size: clamp(18px, 3vw, 36px);
+        font-weight: bolder;
+        letter-spacing: 10px;
+        line-height: 1.5;
+        text-align: center;
+    }    
+    &__arrow {
+        width: clamp(20px, 3vw ,35px);
+        margin-bottom: 5rem;
+    } 
+}

@@ -1,0 +1,103 @@
+@use'../abstracts' as *;
+@use'../mixins' as *;
+
+.service:first-child,
+.service:nth-child(2) {
+    .info {
+        padding: 2.5rem;
+        padding-bottom: 4rem;
+        text-align: center;
+        
+        @include mQ(768px) {
+            width: max(40vw, 300px);
+            text-align: left;
+            @include align-center;
+        }
+    }
+    .title {
+        @include title;
+        font-size: clamp(32px, 5vw, 48px);
+     
+        @include mQ(768px) {
+            width: 30vw;
+        }
+    }
+    .text {
+        @include text($sans-font, lighter, $dark-grayish-blue);
+        @include align-center;
+        font-size: clamp(16px, 2vw, 18px);
+        line-height: 1.5;
+    }
+    .link-yellow {
+        @include underlined-link;
+        &:after {
+            @include line($light-yellow);
+        }
+        &:hover {
+            &:after {
+                @include hover($yellow, $very-dark-desaturated-blue);
+            }
+        }
+    }
+    .link-red {
+        @include underlined-link;
+        &:after {
+            @include line($light-red);
+        }
+        &:hover {
+            &:after {
+                @include hover($soft-red, $very-dark-desaturated-blue);
+            }
+        }
+    }    
+    .image {
+        width: 100%;
+        object-fit: cover;
+
+        @include mQ(768px) {
+            width: 50%;
+        }
+    }
+}
+.service:nth-child(3),
+.service:nth-child(4) {
+    height: max(80vh, 800px);
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    padding-bottom: 2rem;
+
+    .details {
+        height: 230px;
+        padding: 2rem;
+        text-align: center
+    }
+    .title {
+        @include title($dark-desaturated-cyan, capitalize);
+        font-size: clamp(22px, 8vw, 28px);
+    }
+    .text {
+        @include text($sans-font, normal, $dark-desaturated-cyan);
+        @include align-center;
+        font-size: clamp(16px, 2vw, 18px);
+        line-height: 1.5;
+
+        @include mQ(768px) {
+            width: 30vw;
+        }    
+    }
+}
+.service:nth-child(3) {
+    @include bg-image(url(../images/mobile/image-graphic-design.jpg), top center);
+
+    @include mQ(768px) {
+        background-image: url(../images/desktop/image-graphic-design.jpg);
+    }
+}    
+.service:nth-child(4) {
+    @include bg-image(url(../images/mobile/image-photography.jpg), top center);
+
+    @include mQ(768px) {
+        background-image: url(../images/desktop/image-photography.jpg);
+    }    
+}

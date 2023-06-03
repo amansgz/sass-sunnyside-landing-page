@@ -1,0 +1,17 @@
+/* Alignments */
+@mixin flex-column($justify) {
+    display: flex;    
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: center;
+}
+@mixin align-center() {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin flex-between() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}

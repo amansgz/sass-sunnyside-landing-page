@@ -1,0 +1,13 @@
+@use'../abstracts' as *;
+@use'../mixins' as *;
+
+.footer {
+    @include flex-column(center);
+    padding: 4rem 2rem;
+    background-color: $dark-cyan;
+}
+
+.footer__logo {
+    width: max(10vw, 180px);
+    filter: invert(73%) sepia(83%) saturate(1087%) hue-rotate(143deg) brightness(112%) contrast(84%);
+}

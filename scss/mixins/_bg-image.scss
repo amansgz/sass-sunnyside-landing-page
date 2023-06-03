@@ -1,0 +1,8 @@
+@use'../abstracts' as *;
+
+@mixin bg-image($bg-image, $bg-position) {
+    background-color: $white;
+    background-image: $bg-image;
+    background-size: cover;
+    background-position: $bg-position;
+}

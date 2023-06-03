@@ -1,0 +1,49 @@
+@use'../abstracts' as *;
+
+@mixin menu-links($font-color) {
+    font-family: $sans-font;
+    font-size: clamp(16px, 3vw, 20px);
+    color: $font-color;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+@mixin shape-triangle() {
+    content: '';
+    position: absolute;
+    top: -8%;
+    right: 0%;
+    width: 0;
+    height: 0;
+    border-left: 24px solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 25px solid $white;
+}
+
+@mixin underlined-link() {
+    width: 150px;
+    margin-top: 1.5rem;
+    font-family: $serif-font;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $very-dark-desaturated-blue;
+    z-index: 30;
+    position: relative;
+}
+@mixin line($line-color) {
+    content: '';
+    position: absolute;
+    width: 128px;
+    height: 15px;
+    background-color: $line-color;
+    border-radius: 10px;
+    top: 68%;
+    right: -8%;
+    z-index: -30;
+}
+@mixin hover($bg-hover, $color-hover) {
+    background-color: $bg-hover;
+    color: $color-hover;
+    cursor: pointer;
+    transition: 0.1s;
+}

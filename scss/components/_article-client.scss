@@ -1,0 +1,38 @@
+@use'../abstracts' as *;
+@use'../mixins' as *;
+
+.client {
+    @include flex-column(between);
+    margin: 0;
+    padding: 3rem;
+    text-align: center;
+
+    @include mQ(768px) {
+        padding: 2.5rem;
+    }
+    .avatar {
+        @include align-center;
+        width: clamp(70px, 10vw, 100px);
+        border-radius: 50%;
+    }
+    .comment {
+        @include text($sans-font, normal, $dark-moderate-cyan);
+        padding: 6vw 0;
+        margin: 0;
+        font-size: clamp(16px, 2vw, 18px);
+        line-height: 1.5;
+
+        @include mQ(768px) {
+            padding: 5rem 0;
+        }    
+    }
+    .name {
+        @include text($serif-font, 900, $very-dark-desaturated-blue);
+    }
+    .position {
+        @include text($sans-font, normal, $grayish-blue);
+        display: block;
+        padding: .5rem;
+        font-size: clamp(14px, 2vw, 16px);
+    }
+}

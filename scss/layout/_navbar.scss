@@ -1,0 +1,103 @@
+@use'../abstracts' as *;
+@use'../mixins' as *;
+
+.navbar {    
+    height: 1rem;
+
+    @include mQ(768px) {
+        @include flex-between;
+    }
+}
+.navbar-brand {
+    @include flex-between;
+
+    &__link {
+        width: max(10vw, 150px);
+        text-decoration: none;
+    }
+    &__logo {
+        width: 100%;
+    }
+    .btn-hamburguer {
+        padding: 0;
+        background-color: $light-blue;
+        border: 0;
+        outline: 1px solid $light-blue;
+    
+        @include mQ(768px) {
+            display: none;
+        }
+    }    
+}
+
+.navMenu {
+    @include flex-column(space-evenly);
+
+    position: relative;
+    height: 280px;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-left: 0; 
+    background-color: $white;
+    opacity: 0;
+    pointer-events: none;
+
+    @include mQ(768px) {
+        height: 90px;
+        flex-direction: row;
+        margin: 0;
+        background-color: transparent;
+        opacity: 1;
+        pointer-events: visible;
+    }
+
+    &:before {
+        @include shape-triangle;
+        
+        @include mQ(768px) {
+            display: none;
+        }
+    }
+    
+    &__item {
+        text-align: center;
+        list-style: none;
+    }
+    &__link {
+        @include menu-links($dark-grayish-blue);
+        padding: 1rem 2rem;
+
+        @include mQ(768px) {
+            color: $white;
+
+            &:hover {
+                @include hover(none, $light-moderate-blue);
+            } 
+        }
+
+        &--contact {
+            font-family: $serif-font;
+            font-size: .9rem;
+            text-transform: uppercase;
+            color: $very-dark-desaturated-blue;
+            background-color: $yellow;
+            border-radius: 50px;
+
+            @include mQ(768px) {
+                margin-right: 0;
+                padding: .5rem 1rem;     
+                background-color: $white;    
+
+                &:hover {
+                    @include hover($light-moderate-blue, $white);
+                }
+            }         
+        }
+    }
+}
+
+.is-active {
+    opacity: 1;
+    pointer-events: visible;
+    fill: $light-moderate-blue;
+}
