@@ -1,7 +1,7 @@
 @use'../abstracts' as *;
 @use'../mixins' as *;
 
-.navbar {    
+.navbar {
     height: 1rem;
 
     @include mQ(768px) {

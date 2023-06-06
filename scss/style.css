@@ -331,6 +331,10 @@ body {
   min-height: 100vh;
 }
 
+.not-visually {
+  display: none;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
