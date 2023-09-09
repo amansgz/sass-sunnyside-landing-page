@@ -1,14 +1,8 @@
-# 👩‍💻 Frontend Mentor - Sunnyside Landing Page solution
+# 👩‍💻 Sunnyside Landing Page 
 
-Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
-Join to [Frontend Mentor Discord community](https://discord.gg/UAfh3qzhYb)
-
-This is a solution for [Sunnyside Landing Page](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef) challenge.
-
-![Design preview for the Sunnyside Landing Page challenge](./images/desktop-preview.jpg)
 
 ## The challenge
+The challenge is to build out this landing page and get it looking as close to the design as possible.
 
 Users should be able to:
 
@@ -22,10 +16,18 @@ Users should be able to:
 - SASS
 - Mobile-first workflow
 
-## Live site solution
+<div>
+  <h3>
+    <a href= "https://sass-sunnyside-landing-page.netlify.app/">
+      Live site
+    </a>
+    <span> | </span>
+    <a href= "https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-[Live site](https://sass-sunnyside-landing-page.netlify.app/) hosted on Netlify.
+![Design preview for the QR code component coding challenge]()
 
-## Author
-
-- Frontend Mentor - [@amansgz](https://www.frontendmentor.io/profile/amansgz)
+This application/site was created as a submission to <a href= "https://www.frontendmentor.io/">Frontend Mentor Challenges</a> 
