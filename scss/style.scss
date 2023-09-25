@@ -10,14 +10,15 @@
 @use'mixins/bg-image';
 
 @use'layout/base';
-@use'layout/grid';
-@use'layout/section-testimonials';
 @use'layout/header';
-@use'layout/navbar';
+@use'layout/services';
+@use'layout/testimonials';
+@use'layout/gallery';
 @use'layout/footer';
-@use'layout/footer-navigation';
 
 @use'components/hero';
-@use'components/article-service';
-@use'components/article-client';
+@use'components/navbar';
+@use'components/service';
+@use'components/testimonial';
 @use'components/social-menu';
+@use'components/footer-nav';

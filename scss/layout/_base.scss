@@ -1,6 +1,13 @@
 html {
+    height: 100%;
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 body {
-    min-height: 100vh;
+    max-width: 1440px;
+    margin: auto;
+    font-size: 1.6rem;
+}
+.not-visually {
+    display: none;
 }

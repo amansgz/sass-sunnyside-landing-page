@@ -3,6 +3,7 @@
 @mixin bg-image($bg-image, $bg-position) {
     background-color: $white;
     background-image: $bg-image;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: $bg-position;
 }

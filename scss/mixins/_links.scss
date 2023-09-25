@@ -1,8 +1,8 @@
 @use'../abstracts' as *;
 
 @mixin menu-links($font-color) {
-    font-family: $sans-font;
-    font-size: clamp(16px, 3vw, 20px);
+    font-family: $ff-sans;
+    font-size: clamp(1.6rem, calc(1.6rem + ((1vw - 0.32rem) * 0.1912)), 1.8rem);
     color: $font-color;
     text-decoration: none;
     letter-spacing: 1px;
@@ -11,7 +11,7 @@
 @mixin shape-triangle() {
     content: '';
     position: absolute;
-    top: -8%;
+    top: -6%;
     right: 0%;
     width: 0;
     height: 0;
@@ -21,11 +21,12 @@
 }
 
 @mixin underlined-link() {
-    width: 150px;
-    margin-top: 1.5rem;
-    font-family: $serif-font;
+    width: 125px;
+    font-family: $ff-serif;
+    font-size: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
+    text-align: center;
     color: $very-dark-desaturated-blue;
     z-index: 30;
     position: relative;
@@ -38,7 +39,7 @@
     background-color: $line-color;
     border-radius: 10px;
     top: 68%;
-    right: -8%;
+    left: 0;
     z-index: -30;
 }
 @mixin hover($bg-hover, $color-hover) {

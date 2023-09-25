@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.footer__menu {
+  display: flex;
+  padding: 5rem 0 8rem;
+
+  &__link {
+    @include menu-links($dark-moderate-cyan);
+    margin: 3rem;
+    font-weight: 700;
+
+    &:hover {
+      @include hover(none, $white);
+    }
+  }
+}

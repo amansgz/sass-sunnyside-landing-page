@@ -1,0 +1,36 @@
+@use'../abstracts' as *;
+@use'../mixins' as *;
+
+.testimonial {
+    @include flex-column(between);
+
+    padding: 4rem;
+    text-align: center;
+
+    @include mQ(768px) {
+        padding: 2.5rem;
+    }
+    &__photo {
+        @include align-center;
+        width: 70px;
+        border-radius: 50%;
+    }
+    &__blockquote {
+        @include text($ff-sans, normal, $dark-blue);
+        padding: 2rem 0;
+        margin: 0;
+
+        @include mQ(768px) {
+            padding: 5rem 0;
+        }    
+    }
+    &__name__client {
+        @include text($ff-serif, 900, $very-dark-desaturated-blue);
+    }
+    &__position__client {
+        @include text($ff-sans, normal, $dark-grayish-blue);
+        display: block;
+        padding: .5rem;
+        font-size: 1.4rem;
+    }
+}

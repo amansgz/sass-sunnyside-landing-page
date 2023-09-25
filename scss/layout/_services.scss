@@ -1,0 +1,41 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.services__grid__container {
+  @include mQ(768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    .item__transform {
+      grid-column: 1 / 3;
+      
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .image__transform {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+      .service {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+    }
+    
+    .item__stand__out {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .item__design {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+    .item__photography {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
+  }
+}

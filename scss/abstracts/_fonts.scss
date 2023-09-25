@@ -4,5 +4,13 @@
 // Barlow 600 - font-family: 'Barlow', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
 
-$serif-font: 'Fraunces', serif; 
-$sans-font: 'Barlow', sans-serif;
+$ff-serif: 'Fraunces', serif; 
+$ff-sans: 'Barlow', sans-serif;
+
+$size-h1: clamp(3rem, calc(3rem + ((1vw - 0.32rem) * 1.5296)), 4.6rem);
+
+$size-h2: clamp(2.4rem, calc(2.4rem + ((1vw - 0.32rem) * 1.1472)), 3.6rem);
+
+$size-h3: clamp(2rem, calc(2rem + ((1vw - 0.32rem) * 0.7648)), 2.8rem);
+
+$size-h4: clamp(1.8rem, calc(1.8rem + ((1vw - 0.32rem) * 0.478)), 2.3rem);

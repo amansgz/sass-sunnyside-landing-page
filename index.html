@@ -10,27 +10,29 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./scss/style.css" />
+    <!-- scripts -->
     <script src="./scripts/main.js" defer></script>
-
+    <!-- styles -->
+    <link rel="stylesheet" href="./scss/style.css" />
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
 
   <body>
     <header class="header">
-      <nav class="navbar">
-        <div class="navbar-brand">
-          <a class="navbar-brand__link" href="#!">
-            <img
-              class="navbar-brand__logo"
-              src="./images/logo.svg"
-              alt="Sunnyside logo"
-            />
+      <nav class="nav">
+        <div class="nav__mobile">
+          <a class="nav__logo" href="#">
+            <figure>
+              <img
+                src="./images/logo.svg"
+                alt="Sunnyside logo"
+              />
+            </figure>
           </a>
-          <button class="btn-hamburguer" id="btn-hamburguer">
+          <button class="nav__mobile__btn__hamburger" id="btn-hamburger">
             <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
               <path
-                class="svg-hamburguer"
+                class="svg-hamburger"
                 d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
                 fill="#FFF"
                 fill-rule="evenodd"
@@ -39,18 +41,18 @@
           </button>
         </div>
 
-        <ul class="navMenu" id="nav-menu">
-          <li class="navMenu__item">
-            <a class="navMenu__link" href="#about"> About </a>
+        <ul class="nav__menu" id="nav-menu">
+          <li class="nav__menu__item">
+            <a class="nav__menu__link" href="#"> About </a>
           </li>
-          <li class="navMenu__item">
-            <a class="navMenu__link" href="#services"> Services </a>
+          <li class="nav__menu__item">
+            <a class="nav__menu__link" href="#"> Services </a>
           </li>
-          <li class="navMenu__item">
-            <a class="navMenu__link" href="#projects"> Projects </a>
+          <li class="nav__menu__item">
+            <a class="nav__menu__link" href="#"> Projects </a>
           </li>
-          <li class="navMenu__item">
-            <a class="navMenu__link navMenu__link--contact" href="#contact">
+          <li class="nav__menu__item">
+            <a class="nav__menu__link nav__menu__link--contact" href="#">
               Contact
             </a>
           </li>
@@ -59,253 +61,288 @@
     </header>
 
     <main>
-      <div class="hero">
-        <h1 class="hero__title">We are creatives</h1>
-        <a href="#about">
-          <img
-            class="hero__arrow"
-            src="./images/icon-arrow-down.svg"
-            alt="arrow down image"
-          />
-        </a>
-      </div>
-      <div class="grid-container">
-        <article class="service">
-          <picture class="image">
-            <source
-              srcset="./images/desktop/image-transform.jpg"
-              media="(min-width: 900px)"
-            />
-            <source
-              srcset="./images/mobile/image-transform.jpg"
-              media="(min-width: 558px)"
-            />
-            <img
-              src="./images/desktop/image-transform.jpg"
-              alt="egg with background yellow"
-            />
-          </picture>
-          <div class="info">
-            <h2 class="title">Transform your brand</h2>
-            <p class="text">
-              We are a full-service creative agency specializing in helping
-              brands grow fast. Engage your clients through compelling visuals
-              that do most of the marketing for you.
-            </p>
-            <a class="link-yellow"> Learn more </a>
+      <section>
+        <div class= "hero__container">
+          <div class= "hero__content">
+            <h1 class= "hero__content__title">
+              We are creatives
+            </h1>
+            <a href= "#about">
+              <figure class= "hero__content__arrow">
+                <img
+                  src= "./images/icon-arrow-down.svg"
+                  alt= "arrow down">
+              </figure>  
+            </a>
           </div>
-        </article>
+        </div>
+      </section>
 
-        <article class="service">
-          <picture class="image">
-            <source
-              srcset="./images/desktop/image-stand-out.jpg"
-              media="(min-width: 900px)"
-            />
-            <source
-              srcset="./images/mobile/image-stand-out.jpg"
-              media="(min-width: 558px)"
-            />
-            <img
-              src="./images/desktop/image-stand-out.jpg"
-              alt="glass with pink background"
-            />
-          </picture>
-
-          <div class="info">
-            <h2 class="title">Stand out to the right audience</h2>
-            <p class="text">
-              Using a collaborative formula of designers, researchers,
-              photographers, videographers, and copywriters, we’ll build and
-              extend your brand in digital places.
-            </p>
-            <a class="link-red"> Learn more </a>
-          </div>
-        </article>
-
-        <article class="service">
-          <div class="details">
-            <h2 class="title">Graphic design</h2>
-            <p class="text">
-              Great design makes you memorable. We deliver artwork that
-              underscores your brand message and captures potential clients’
-              attention.
-            </p>
-          </div>
-        </article>
-
-        <article class="service">
-          <div class="details">
-            <h2 class="title">Photography</h2>
-            <p class="text">
-              Increase your credibility by getting the most stunning,
-              high-quality photos that improve your business image.
-            </p>
-          </div>
-        </article>
-
-        <section class="testimonials">
-          <h2 class="testimonials__title">Client testimonials</h2>
-          <div class="clients">
-            <article class="client">
-              <h2 class="not-visually">Testimonial</h2>
+      <!-- Services section -->
+      <section>
+        <div class="services__grid__container">
+          <article class= "item__transform">
+            <picture class= "service__image image__transform">
+              <source
+                srcset="./images/mobile/image-transform.jpg"
+                media="(max-width: 900px)"
+              />
               <img
-                class="avatar"
+                src="./images/desktop/image-transform.jpg"
+                alt="egg with background yellow"
+              />
+            </picture>
+            <div class= "service">
+              <h2 class= "service__title">
+                Transform your brand
+              </h2>
+              <p class= "service__text">
+                We are a full-service creative agency specializing in helping
+                brands grow fast. Engage your clients through compelling visuals
+                that do most of the marketing for you.
+              </p>
+              <a class= "service__link service__link--yellow">
+                Learn more 
+              </a>
+            </div>
+          </article>
+          
+          <article class= "item__stand__out">
+            <picture class="service__image image__stand__out">
+              <source
+                srcset="./images/mobile/image-stand-out.jpg"
+                media="(max-width: 900px)"
+              />
+              <img
+                src="./images/desktop/image-stand-out.jpg"
+                alt="glass with pink background"
+              />
+            </picture>
+
+            <div class="service">
+              <h2 class="service__title">Stand out to the right audience</h2>
+              <p class="service__text">
+                Using a collaborative formula of designers, researchers,
+                photographers, videographers, and copywriters, we’ll build and
+                extend your brand in digital places.
+              </p>
+              <a class="service__link service__link--red"> Learn more </a>
+            </div>
+          </article>
+
+          <article class= "item__design">
+            <div class= "service">
+              <h2 class="service__title service__title--secondary">
+                Graphic design
+              </h2>
+              <p class="service__text service__text--secondary">
+                Great design makes you memorable. We deliver artwork that
+                underscores your brand message and captures potential clients’
+                attention.
+              </p>
+            </div>
+          </article>
+
+          <article class="item__photography">
+            <div class="service">
+              <h2 class="service__title service__title--secondary">
+                Photography
+              </h2>
+              <p class="service__text service__text--secondary">
+                Increase your credibility by getting the most stunning,
+                high-quality photos that improve your business image.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Testimonials section -->
+      <section class="section__testimonials">
+        <div class= "section__testimonials__container">
+          <h2 class="section__testimonials__title">
+            Client testimonials
+          </h2>
+          <div class="testimonials">
+            <article class="testimonial">
+              <h2 class="not-visually">
+                Testimonial
+              </h2>
+              <img class="testimonial__photo"
                 src="./images/image-emily.jpg"
                 alt="client photography"
               />
-              <blockquote class="comment">
+              <blockquote class="testimonial__blockquote">
                 We put our trust in Sunnyside and they delivered, making sure
                 our needs were met and deadlines were always hit.
               </blockquote>
-              <span class="name"> Emily R. </span>
-              <span class="position"> Marketing Director </span>
+              <span class="testimonial__name__client">
+                Emily R. 
+              </span>
+              <span class="testimonial__position__client"> 
+                Marketing Director 
+              </span>
             </article>
 
-            <article class="client">
-              <h2 class="not-visually">Testimonial</h2>
-              <img
-                class="avatar"
+            <article class="testimonial">
+              <h2 class="not-visually">
+                Testimonial
+              </h2>
+              <img class="testimonial__photo"
                 src="./images/image-thomas.jpg"
                 alt="client photography"
               />
-              <blockquote class="comment">
+              <blockquote class="testimonial__blockquote">
                 Sunnyside’s enthusiasm coupled with their keen interest in our
                 brand’s success made it a satisfying and enjoyable experience.
               </blockquote>
-              <span class="name"> Thomas S. </span>
-              <span class="position"> Chief Operating Officer </span>
+              <span class="testimonial__name__client"> 
+                Thomas S. 
+              </span>
+              <span class="testimonial__position__client"> 
+                Chief Operating Officer 
+              </span>
             </article>
 
-            <article class="client">
-              <h2 class="not-visually">Testimonial</h2>
-              <img
-                class="avatar"
+            <article class="testimonial">
+              <h2 class="not-visually">
+                Testimonial
+              </h2>
+              <img class="testimonial__photo"
                 src="./images/image-jennie.jpg"
                 alt="client photography"
               />
-              <blockquote class="comment">
+              <blockquote class="testimonial__blockquote">
                 Incredible end result! Our sales increased over 400% when we
                 worked with Sunnyside. Highly recommended!
               </blockquote>
-              <span class="name"> Jennie F. </span>
-              <span class="position"> Business Owner </span>
+              <span class="testimonial__name__client">
+                Jennie F. 
+              </span>
+              <span class="testimonial__position__client"> 
+                Business Owner 
+              </span>
             </article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="gallery" id="projects">
-          <h2 class="not-visually">Project Gallery</h2>
-          <picture class="gallery__img">
-            <source
-              srcset="./images/desktop/image-gallery-milkbottles.jpg"
-              media="(min-width: 900px)"
-            />
+      <!-- Gallery section -->
+      <section>
+        <div class="gallery__container">
+          <h2 class= "not-visually">
+            Project Gallery
+          </h2>
+          <picture>
             <source
               srcset="./images/mobile/image-gallery-milkbottles.jpg"
-              media="(min-width: 558px)"
+              media="(max-width: 900px)"
             />
             <img
               src="./images/desktop/image-gallery-milkbottles.jpg"
               alt="milk bottles with sky background"
             />
           </picture>
-          <picture class="gallery__img">
-            <source
-              srcset="./images/desktop/image-gallery-orange.jpg"
-              media="(min-width: 900px)"
-            />
+          <picture>
             <source
               srcset="./images/mobile/image-gallery-orange.jpg"
-              media="(min-width: 558px)"
+              media="(max-width: 900px)"
             />
             <img
               src="./images/desktop/image-gallery-orange.jpg"
               alt="an orange in a white blue bordered plate with orange background"
             />
           </picture>
-          <picture class="gallery__img">
-            <source
-              srcset="./images/desktop/image-gallery-cone.jpg"
-              media="(min-width: 900px)"
-            />
+          <picture>
             <source
               srcset="./images/mobile/image-gallery-cone.jpg"
-              media="(min-width: 558px)"
+              media="(max-width: 900px)"
             />
             <img
               src="./images/desktop/image-gallery-cone.jpg"
               alt="ice-cream cone with blue background"
             />
           </picture>
-          <picture class="gallery__img">
-            <source
-              srcset="/images/desktop/image-gallery-sugarcubes.jpg"
-              media="(min-width: 900px)"
-            />
+          <picture>
             <source
               srcset="./images/mobile/image-gallery-sugar-cubes.jpg"
-              media="(min-width: 558px)"
+              media="(max-width: 900px)"
             />
             <img
               src="/images/desktop/image-gallery-sugarcubes.jpg"
               alt="sugar cubes with pink background"
             />
           </picture>
-        </section>
-      </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="footer" id="contact">
-      <img src="./images/logo.svg" class="footer__logo" alt="footer logo" />
+    <footer class="footer">
+      <figure>
+        <img src="./images/logo.svg" class="footer__logo" alt="footer logo" />
+      </figure>
 
-      <ul class="footer-menu">
-        <li class="footer-menu__item">
-          <a class="footer-menu__link" href="#about"> About </a>
+      <ul class="footer__menu">
+        <li>
+          <a class="footer__menu__link" href="#about"> About </a>
         </li>
-        <li class="footer-menu__item">
-          <a class="footer-menu__link" href="#services"> Services </a>
+        <li>
+          <a class="footer__menu__link" href="#services"> Services </a>
         </li>
-        <li class="footer-menu__item">
-          <a class="footer-menu__link" href="#projects"> Projects </a>
+        <li>
+          <a class="footer__menu__link" href="#projects"> Projects </a>
         </li>
       </ul>
 
-      <ul class="social-menu">
-        <li class="social-menu__item">
-          <a class="social-menu__link" href="">
-            <img
-              class="social-menu__icon"
-              src="./images/icon-facebook.svg"
-              alt="icon facebook"
-            />
+      <ul class="social__menu">
+        <li>
+          <a class="social__menu__link" 
+            href=""
+            aria-label="Go to Facebook">
+            <figure class="social__menu__icon">
+              <img
+                src="./images/icon-facebook.svg"
+                alt="icon facebook"
+              />
+            </figure>
           </a>
         </li>
-        <li class="social-menu__item">
-          <a class="social-menu__link" href="">
-            <img
-              class="social-menu__icon"
-              src="./images/icon-instagram.svg"
-              alt="icon instagram"
-            />
+        <li>
+          <a class="social__menu__link" 
+            href=""
+            aria-label="Go to Instagram">
+            <figure>
+              <img
+                class="social__menu__icon"
+                src="./images/icon-instagram.svg"
+                alt="icon instagram"
+              />
+            </figure>
           </a>
         </li>
-        <li class="social-menu__item">
-          <a class="social-menu__link" href="">
-            <img
-              class="social-menu__icon"
-              src="./images/icon-twitter.svg"
-              alt="icon twitter"
-            />
+        <li>
+          <a class="social__menu__link" 
+            href=""
+            aria-label="Go to Twitter">
+            <figure class="social__menu__icon">
+              <img
+                src="./images/icon-twitter.svg"
+                alt="icon twitter"
+              />
+            </figure>
           </a>
         </li>
-        <li class="social-menu__item">
-          <a class="social-menu__link" href="">
-            <img
-              class="social-menu__icon"
-              src="./images/icon-pinterest.svg"
-              alt="icon pinterest"
-            />
+        <li>
+          <a class="social__menu__link" 
+            href=""
+            aria-label="Go to Pinterest">
+            <figure class="social__menu__icon">
+              <img
+                src="./images/icon-pinterest.svg"
+                alt="icon pinterest"
+              />
+            </figure>
           </a>
         </li>
       </ul>

@@ -1,0 +1,103 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.service {
+  text-align: center;
+  padding: 6rem 0;
+
+  @include flex-column(center);
+
+  @include mQ(768px) {
+    align-items: start;
+    text-align: left;
+    padding: 2rem;
+
+    @include align-center;
+  }
+  &__title {
+    width: 15ch;
+
+    @include title($very-dark-desaturated-blue, $size-h2);
+
+    @include mQ(768px) {
+      width: 15ch;
+    }
+
+    &--secondary {
+      text-align: center;
+
+      @include title($dark-desaturated-cyan, $size-h3);
+
+      
+    }
+  }
+  &__text {
+    width: 32ch;
+    margin: 3rem 0;
+    @include align-center;
+    @include text($ff-sans, lighter, $dark-grayish-blue);
+
+    @include mQ(768px) {
+      margin-left: 0;
+    }
+    @include mQ(1200px) {
+      width: 42ch;
+      margin: 5rem 0;
+    }
+
+    &--secondary {
+      @include text($ff-sans, normal, $dark-desaturated-cyan);
+    }
+  }
+  &__link {
+    @include underlined-link;
+
+    &--yellow {
+      &:after {
+        @include line($light-yellow);
+      }
+      &:hover {
+        &:after {
+          @include hover($yellow, $very-dark-desaturated-blue);
+        }
+      }
+    }
+    &--red {
+      &:after {
+        @include line($light-red);
+      }
+      &:hover {
+        &:after {
+          @include hover($soft-red, $very-dark-desaturated-blue);
+        }
+      }
+    }
+  }
+}
+
+.item__design,
+.item__photography {
+  display: grid;
+  align-items: end;
+  height: 650px;
+  text-align: center;
+
+  .service {
+    align-items: center;
+  }
+} 
+
+.item__design {
+  @include bg-image(url(../images/mobile/image-graphic-design.jpg), top center);
+
+  @include mQ(600px) {
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+  }
+}
+.item__photography {
+  @include bg-image(url(../images/mobile/image-photography.jpg), top center);
+
+  @include mQ(600px) {
+    background-image: url(../images/desktop/image-photography.jpg);
+  }
+}

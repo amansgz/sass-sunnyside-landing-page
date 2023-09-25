@@ -1,27 +1,34 @@
 @use'../abstracts' as *;
 @use'../mixins' as *;
 
-.hero {
-    @include flex-column(center);
-    @include bg-image(url(../images/mobile/image-header.jpg), center center);
-    
+.hero__container {
     height: 80vh;
-    padding: 10vw;
 
-    @include mQ(600px) {
-        @include bg-image(url(../images/desktop/image-header.jpg), center center);
+    @include flex-column(center);
+
+    @include bg-image(url(../images/mobile/image-header.jpg), center bottom);
+
+    @include mQ(1200px) {
+        height: 100vh;
+
+        @include bg-image(url(../images/desktop/image-header.jpg), center bottom);
     }
+}
+
+.hero__content {
+   
+    @include flex-column(center);
 
     &__title {
-        @include title($white, uppercase);
-        font-size: clamp(18px, 3vw, 36px);
-        font-weight: bolder;
-        letter-spacing: 10px;
-        line-height: 1.5;
+        width: 20ch;
+        margin-bottom: 4rem;
         text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+
+        @include title($white, $size-h1);
     }    
     &__arrow {
-        width: clamp(20px, 3vw ,35px);
-        margin-bottom: 5rem;
+        width: 24px;
     } 
 }

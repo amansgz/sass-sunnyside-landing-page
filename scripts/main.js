@@ -1,16 +1,16 @@
-const btn_hamburguer = document.getElementById('btn-hamburguer');
-const svg_hamburguer = document.querySelector('.svg-hamburguer');
-const nav_Menu = document.querySelector('.navMenu');
+const btn_hamburger = document.getElementById('btn-hamburger');
+const svg_hamburger = document.querySelector('.svg-hamburger');
+const nav_Menu = document.querySelector('.nav__menu');
 
 
-btn_hamburguer.addEventListener('click', () => {
-    svg_hamburguer.classList.toggle('is-active');
+btn_hamburger.addEventListener('click', () => {
+    svg_hamburger.classList.toggle('is-active');
     nav_Menu.classList.toggle('is-active');
 });
 
 document.addEventListener("click", (e) => {
-    if (!e.target.matches(".navMenu a")) return false;
+    if (!e.target.matches(".nav__menu a")) return false;
 
-    svg_hamburguer.classList.remove('is-active');
+    svg_hamburger.classList.remove('is-active');
     nav_Menu.classList.remove('is-active');
 });

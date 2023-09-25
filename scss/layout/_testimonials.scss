@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.section__testimonials {
+  padding: $section-block-padding $section-inline-padding;
+
+  &__title {
+    @include title($dark-grayish-blue, $size-h4);
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include mQ(768px) {
+      margin-bottom: 6rem;
+    }
+  }
+}
+.testimonials {
+  @include mQ(768px) {
+    display: flex;
+  }
+}

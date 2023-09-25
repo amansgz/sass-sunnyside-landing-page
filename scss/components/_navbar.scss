@@ -1,0 +1,106 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.nav {
+    height: 4rem;
+    padding: 1rem;
+
+  @include mQ(768px) {
+    @include flex-between;
+  }
+
+  &__logo {
+    width: 150px;
+  }
+
+  &__mobile {
+    @include flex-between;
+
+    &__btn__hamburger {
+      padding: 0;
+      background-color: $light-blue;
+      border: 0;
+      outline: 1px solid $light-blue;
+
+      @include mQ(768px) {
+        display: none;
+      }
+    }
+  }
+  &__menu {
+    @include flex-column(space-evenly);
+
+    position: relative;
+    height: 340px;
+    padding: 1rem;
+    margin-top: 4rem;
+    margin-left: 0;
+    background-color: $white;
+    opacity: 0;
+    pointer-events: none;
+
+    @include mQ(768px) {
+    height: auto;
+      flex-direction: row;
+      margin: 0;
+      background-color: transparent;
+      opacity: 1;
+      pointer-events: visible;
+    }
+
+    &:before {
+      @include shape-triangle;
+
+      @include mQ(768px) {
+        display: none;
+      }
+    }
+
+    &__item {
+      text-align: center; 
+    }
+
+    &__link {
+      @include menu-links($dark-grayish-blue);
+      padding: 1rem 2rem;
+
+      @include mQ(768px) {
+        color: $white;
+        margin: 0 1rem;
+
+        &:hover {
+          @include hover(none, $light-moderate-blue);
+        }
+      }
+      @include mQ(1200px) {
+        margin: 0 1.7rem;
+      }  
+
+      &--contact {
+        padding: 2rem 3.5rem;
+        font-family: $ff-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $very-dark-desaturated-blue;
+        background-color: $yellow;
+        border-radius: 50px;
+
+        @include mQ(768px) {
+          margin-right: 0;
+          background-color: $white;
+
+          &:hover {
+            @include hover($light-moderate-blue, $white);
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-active {
+  opacity: 1;
+  pointer-events: visible;
+  fill: $light-moderate-blue;
+}
