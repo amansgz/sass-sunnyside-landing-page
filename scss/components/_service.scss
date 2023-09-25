@@ -10,7 +10,7 @@
   @include mQ(768px) {
     align-items: start;
     text-align: left;
-    padding: 2rem;
+    padding: 2rem 0;
 
     @include align-center;
   }
@@ -20,7 +20,10 @@
     @include title($very-dark-desaturated-blue, $size-h2);
 
     @include mQ(768px) {
-      width: 15ch;
+      width: 12ch;
+    }
+    @include mQ(1200px) {
+      width: 16ch;
     }
 
     &--secondary {
@@ -38,15 +41,17 @@
     @include text($ff-sans, lighter, $dark-grayish-blue);
 
     @include mQ(768px) {
+      width: 30ch;
       margin-left: 0;
     }
     @include mQ(1200px) {
-      width: 42ch;
+      width: 38ch;
       margin: 5rem 0;
     }
 
     &--secondary {
       @include text($ff-sans, normal, $dark-desaturated-cyan);
+      text-align: center;
     }
   }
   &__link {

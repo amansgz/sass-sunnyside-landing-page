@@ -19,16 +19,29 @@
    
     @include flex-column(center);
 
+    @include mQ(1200px) {
+        margin-bottom: 14rem;
+    }
+
     &__title {
-        width: 20ch;
+        width: 15ch;
         margin-bottom: 4rem;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 10px;
 
         @include title($white, $size-h1);
+
+        @include mQ(1200px) {
+            width: 20ch;
+            margin-bottom: 14rem;
+        }
     }    
     &__arrow {
         width: 24px;
+
+        @include mQ(1200px) {
+            width: 32px;
+        }    
     } 
 }

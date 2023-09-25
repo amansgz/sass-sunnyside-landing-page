@@ -61,14 +61,6 @@ img {
   width: 100%;
 }
 
-/* 
-@mixin title($color-title: $very-dark-desaturated-blue, $transform-title: none){
-    font-family: $serif-font;
-    font-weight: 900;
-    color: $color-title;
-    text-transform: $transform-title;
-}
- */
 /* Alignments */
 html {
   height: 100%;
@@ -138,7 +130,6 @@ body {
   font-size: clamp(1.8rem, 1.8rem + (1vw - 0.32rem) * 0.478, 2.3rem);
   font-weight: 900;
   color: hsl(232, 10%, 55%);
-  /*  line-height: 1.5; */
   margin-bottom: 3rem;
   letter-spacing: 2px;
   text-align: center;
@@ -209,8 +200,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .hero__content {
+    margin-bottom: 14rem;
+  }
+}
 .hero__content__title {
-  width: 20ch;
+  width: 15ch;
   margin-bottom: 4rem;
   text-align: center;
   text-transform: uppercase;
@@ -219,10 +215,20 @@ body {
   font-size: clamp(3rem, 3rem + (1vw - 0.32rem) * 1.5296, 4.6rem);
   font-weight: 900;
   color: hsl(0, 0%, 100%);
-  /*  line-height: 1.5; */
+}
+@media screen and (min-width: 1200px) {
+  .hero__content__title {
+    width: 20ch;
+    margin-bottom: 14rem;
+  }
 }
 .hero__content__arrow {
   width: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__content__arrow {
+    width: 32px;
+  }
 }
 
 .nav {
@@ -364,7 +370,7 @@ body {
   .service {
     align-items: start;
     text-align: left;
-    padding: 2rem;
+    padding: 2rem 0;
     margin-right: auto;
     margin-left: auto;
   }
@@ -375,11 +381,15 @@ body {
   font-size: clamp(2.4rem, 2.4rem + (1vw - 0.32rem) * 1.1472, 3.6rem);
   font-weight: 900;
   color: hsl(212, 27%, 19%);
-  /*  line-height: 1.5; */
 }
 @media screen and (min-width: 768px) {
   .service__title {
-    width: 15ch;
+    width: 12ch;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .service__title {
+    width: 16ch;
   }
 }
 .service__title--secondary {
@@ -388,7 +398,6 @@ body {
   font-size: clamp(2rem, 2rem + (1vw - 0.32rem) * 0.7648, 2.8rem);
   font-weight: 900;
   color: hsl(167, 40%, 24%);
-  /*  line-height: 1.5; */
 }
 .service__text {
   width: 32ch;
@@ -403,12 +412,13 @@ body {
 }
 @media screen and (min-width: 768px) {
   .service__text {
+    width: 30ch;
     margin-left: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .service__text {
-    width: 42ch;
+    width: 38ch;
     margin: 5rem 0;
   }
 }
@@ -418,6 +428,7 @@ body {
   font-weight: normal;
   color: hsl(167, 40%, 24%);
   line-height: 1.5;
+  text-align: center;
 }
 .service__link {
   width: 125px;
@@ -582,7 +593,7 @@ body {
   color: hsl(168, 34%, 41%);
   text-decoration: none;
   letter-spacing: 1px;
-  margin: 3rem;
+  margin: 2.5rem;
   font-weight: 700;
 }
 .footer__menu__link:hover {
